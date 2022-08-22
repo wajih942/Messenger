@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>515827493595-34sbcneevdhmo1kmd4s1jsjmgqdpjubt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.515827493595-34sbcneevdhmo1kmd4s1jsjmgqdpjubt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCakKEDmv4rGDzsBxTnMYauDXys4KmkunE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>515827493595</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>wajih.Messenger</string>
+	<key>PROJECT_ID</key>
+	<string>messenger-67d95</string>
+	<key>STORAGE_BUCKET</key>
+	<string>messenger-67d95.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:515827493595:ios:7501209a7a7825ff56fafe</string>
+</dict>
+</plist>

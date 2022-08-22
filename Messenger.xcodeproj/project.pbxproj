@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460412A528B2D3FC00ABD2B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */; };
 		46E5685D28AC3F4D000C41E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5685C28AC3F4D000C41E2 /* AppDelegate.swift */; };
 		46E5685F28AC3F4D000C41E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5685E28AC3F4D000C41E2 /* SceneDelegate.swift */; };
-		46E5686128AC3F4D000C41E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5686028AC3F4D000C41E2 /* ViewController.swift */; };
+		46E5686128AC3F4D000C41E2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5686028AC3F4D000C41E2 /* LoginViewController.swift */; };
 		46E5686428AC3F4D000C41E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E5686228AC3F4D000C41E2 /* Main.storyboard */; };
 		46E5686628AC3F4E000C41E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E5686528AC3F4E000C41E2 /* Assets.xcassets */; };
 		46E5686928AC3F4E000C41E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E5686728AC3F4E000C41E2 /* LaunchScreen.storyboard */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46E5685928AC3F4D000C41E2 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5685C28AC3F4D000C41E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E5685E28AC3F4D000C41E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		46E5686028AC3F4D000C41E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46E5686028AC3F4D000C41E2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		46E5686328AC3F4D000C41E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46E5686528AC3F4E000C41E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E5686828AC3F4E000C41E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,11 +67,12 @@
 			children = (
 				46E5685C28AC3F4D000C41E2 /* AppDelegate.swift */,
 				46E5685E28AC3F4D000C41E2 /* SceneDelegate.swift */,
-				46E5686028AC3F4D000C41E2 /* ViewController.swift */,
+				46E5686028AC3F4D000C41E2 /* LoginViewController.swift */,
 				46E5686228AC3F4D000C41E2 /* Main.storyboard */,
 				46E5686528AC3F4E000C41E2 /* Assets.xcassets */,
 				46E5686728AC3F4E000C41E2 /* LaunchScreen.storyboard */,
 				46E5686A28AC3F4E000C41E2 /* Info.plist */,
+				460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				982DD496382BBC2E2438A9DC /* Pods-Messenger.debug.xcconfig */,
 				8EC46D5AE4866C438834B6EB /* Pods-Messenger.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E5686928AC3F4E000C41E2 /* LaunchScreen.storyboard in Resources */,
+				460412A528B2D3FC00ABD2B5 /* GoogleService-Info.plist in Resources */,
 				46E5686628AC3F4E000C41E2 /* Assets.xcassets in Resources */,
 				46E5686428AC3F4D000C41E2 /* Main.storyboard in Resources */,
 			);
@@ -207,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E5686128AC3F4D000C41E2 /* ViewController.swift in Sources */,
+				46E5686128AC3F4D000C41E2 /* LoginViewController.swift in Sources */,
 				46E5685D28AC3F4D000C41E2 /* AppDelegate.swift in Sources */,
 				46E5685F28AC3F4D000C41E2 /* SceneDelegate.swift in Sources */,
 			);

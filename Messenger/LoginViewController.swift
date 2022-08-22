@@ -43,6 +43,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         updateUIFor(login: true)
         setupTextFieldDelegates()
+        setupBackgroundTap()
     }
     
     // MARK: - IBActions
@@ -58,7 +59,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         updateUIFor(login: sender.titleLabel?.text == "Login")
-        //if it is true it will change to false the opposite is true 
+        //if it is true it will change to false the opposite is true
         isLogin.toggle()
     }
     
@@ -73,7 +74,13 @@ class LoginViewController: UIViewController {
     @objc func textFieldDidChangeSelection(_ textField:UITextField) {
         updatePlaceholderLabels(textField: textField)
     }
-    
+    private func setupBackgroundTap()  {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    @objc func backgroundTap() {
+        view.endEditing(false)
+    }
     
     // MARK: - Animations
     

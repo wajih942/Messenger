@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 //if we want to rename our view controller (right click and refactor ->rename)
 class LoginViewController: UIViewController {
     // MARK: - IBOutlet
@@ -49,12 +50,29 @@ class LoginViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        if isDataInputedFor(type: isLogin ? "login" : "registration") {
+            isLogin ? loginUser() : registerUser()
+        }else{
+            ProgressHUD.showFailed("All Fields are required")
+            
+        }
     }
     
     @IBAction func forgetPasswordButtonPressed(_ sender: Any) {
+        if isDataInputedFor(type: "password") {
+            resetPassword()
+        }else{
+            ProgressHUD.showFailed("Email is required")
+            
+        }
     }
     
     @IBAction func resendEmailButtonPressed(_ sender: Any) {
+        if isDataInputedFor(type: "password") {
+            resendVerificationEmail()
+        }else{
+            ProgressHUD.showFailed("Email is required")
+        }
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
@@ -79,6 +97,7 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     @objc func backgroundTap() {
+        //this will disable the key board
         view.endEditing(false)
     }
     
@@ -109,6 +128,71 @@ class LoginViewController: UIViewController {
             RepeatLabelOutlet.text = textField.hasText ? "Repeat Password" : ""
             
         }
+    }
+    
+    // MARK: - Helpers
+    private func isDataInputedFor(type:String) -> Bool {
+        switch type {
+        case "login":
+            return emailTextField.text != "" && passwordTextField.text != ""
+        case "registration":
+            return emailTextField.text != "" && passwordTextField.text != "" && repeatTextField.text != ""
+        default:
+            return emailTextField.text != ""
+        }
+    }
+    
+    private func loginUser(){
+        FirebaseUserListener.shared.loginUserWithEmail(email: emailTextField.text!, password: passwordTextField.text!) { error, isEmailVerified in
+            if error == nil {
+                if isEmailVerified{
+                    self.goToApp()
+                }else{
+                    ProgressHUD.showFailed("Please verify email.")
+                    self.resendEmailButtonOutlet.isHidden = false
+                }
+            }else{
+                ProgressHUD.showFailed(error!.localizedDescription)
+            }
+        }
+    }
+    private func registerUser(){
+        if passwordTextField.text! == repeatTextField.text!{
+            FirebaseUserListener.shared.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!) { error in
+                if error == nil{
+                    ProgressHUD.showSuccess("Verification Email sent.")
+                    self.resendEmailButtonOutlet.isHidden = false
+                }else{
+                    ProgressHUD.showFailed(error!.localizedDescription)
+                }
+            }
+        }else{
+            ProgressHUD.showFailed("The Passwords don't match")
+        }
+    }
+    
+    private func resetPassword(){
+        FirebaseUserListener.shared.resetPasswordFor(email: emailTextField.text!) { error in
+            if error == nil {
+                ProgressHUD.showSuccess("Reset link sent to email.")
+            }else{
+                ProgressHUD.showFailed(error!.localizedDescription)
+            }
+        }
+    }
+    private func resendVerificationEmail(){
+        FirebaseUserListener.shared.resetPasswordFor(email: emailTextField.text!) { error in
+            if error == nil {
+                ProgressHUD.showSuccess("Another verification was sent to email.")
+            }else{
+                ProgressHUD.showFailed("Failed to resend verification eamil.")
+            }
+        }
+    }
+    // MARK: - Navigations
+    
+    private func goToApp() {
+        print("ok")
     }
         
     

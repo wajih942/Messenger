@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		460412A528B2D3FC00ABD2B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */; };
+		467F163328B532F40044BEFA /* SettingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F163228B532F40044BEFA /* SettingsTableTableViewController.swift */; };
+		467F163528B586BC0044BEFA /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F163428B586BC0044BEFA /* EditProfileTableViewController.swift */; };
 		468DEBA428B440EC00EB3739 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DEBA328B440EC00EB3739 /* User.swift */; };
 		468DEBA728B447C300EB3739 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DEBA628B447C300EB3739 /* Constants.swift */; };
 		468DEBA928B44BA000EB3739 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DEBA828B44BA000EB3739 /* FCollectionReference.swift */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		467F163228B532F40044BEFA /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
+		467F163428B586BC0044BEFA /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		468DEBA328B440EC00EB3739 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		468DEBA628B447C300EB3739 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		468DEBA828B44BA000EB3739 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				46E5685C28AC3F4D000C41E2 /* AppDelegate.swift */,
 				46E5685E28AC3F4D000C41E2 /* SceneDelegate.swift */,
 				46E5686028AC3F4D000C41E2 /* LoginViewController.swift */,
+				467F163228B532F40044BEFA /* SettingsTableTableViewController.swift */,
+				467F163428B586BC0044BEFA /* EditProfileTableViewController.swift */,
 				468DEBAA28B44CBF00EB3739 /* FirebaseHelpers */,
 				468DEBA528B440F400EB3739 /* Model */,
 				468DEBAD28B486FE00EB3739 /* Helpers */,
@@ -247,9 +253,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				468DEBA928B44BA000EB3739 /* FCollectionReference.swift in Sources */,
+				467F163328B532F40044BEFA /* SettingsTableTableViewController.swift in Sources */,
 				468DEBA728B447C300EB3739 /* Constants.swift in Sources */,
 				468DEBA428B440EC00EB3739 /* User.swift in Sources */,
 				46E5686128AC3F4D000C41E2 /* LoginViewController.swift in Sources */,
+				467F163528B586BC0044BEFA /* EditProfileTableViewController.swift in Sources */,
 				46E5685D28AC3F4D000C41E2 /* AppDelegate.swift in Sources */,
 				468DEBAC28B44E0C00EB3739 /* FirebaseUserListener.swift in Sources */,
 				46E5685F28AC3F4D000C41E2 /* SceneDelegate.swift in Sources */,

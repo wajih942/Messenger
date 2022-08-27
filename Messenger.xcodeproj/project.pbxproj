@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		460412A528B2D3FC00ABD2B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */; };
+		463F992428B7078D0089A7ED /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F992328B7078D0089A7ED /* FileStorage.swift */; };
 		467F163328B532F40044BEFA /* SettingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F163228B532F40044BEFA /* SettingsTableTableViewController.swift */; };
 		467F163528B586BC0044BEFA /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F163428B586BC0044BEFA /* EditProfileTableViewController.swift */; };
 		468DEBA428B440EC00EB3739 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DEBA328B440EC00EB3739 /* User.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		463F992328B7078D0089A7ED /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		467F163228B532F40044BEFA /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
 		467F163428B586BC0044BEFA /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		468DEBA328B440EC00EB3739 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				468DEBA828B44BA000EB3739 /* FCollectionReference.swift */,
 				468DEBAB28B44E0C00EB3739 /* FirebaseUserListener.swift */,
+				463F992328B7078D0089A7ED /* FileStorage.swift */,
 			);
 			path = FirebaseHelpers;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				468DEBA928B44BA000EB3739 /* FCollectionReference.swift in Sources */,
+				463F992428B7078D0089A7ED /* FileStorage.swift in Sources */,
 				467F163328B532F40044BEFA /* SettingsTableTableViewController.swift in Sources */,
 				468DEBA728B447C300EB3739 /* Constants.swift in Sources */,
 				468DEBA428B440EC00EB3739 /* User.swift in Sources */,

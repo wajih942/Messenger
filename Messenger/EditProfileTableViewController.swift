@@ -65,6 +65,20 @@ class EditProfileTableViewController: UITableViewController {
         self.present(gallery,animated: true,completion:nil)
     }
     
+    // MARK: - UploadImages
+    
+    private func uploadAvatarImage(_ image: UIImage){
+        let fileDirectory = "Avatars/" + "_\(User.currentId)" + ".jpg"
+        FileStorage.uploadImage(image, directory: fileDirectory) { avatarLink in
+            if var user = User.currentUser{
+                user.avatarLink = avatarLink ?? ""
+                saveUserLocally(user)
+                FirebaseUserListener.shared.saveUserToFirestore(user)
+            }
+            //TODO: save the image locally 
+        }
+    }
+    
     // MARK: - IBActions
     
     @IBAction func editButtonPressed(_ sender: Any) {
@@ -97,6 +111,7 @@ extension EditProfileTableViewController : GalleryControllerDelegate{
             images.first!.resolve { avatar in
                 if avatar != nil {
                     // TODO: upload image
+                    self.uploadAvatarImage(avatar!)
                     self.avatarImageView.image = avatar
                 }else{
                     ProgressHUD.showError("couldn't select image")

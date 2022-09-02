@@ -38,7 +38,8 @@ class ProfileTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1 {
             print("start chatting")
-            //TODO: go to chatroom
+            
+            
         }
     }
     //MARK: - setupUI

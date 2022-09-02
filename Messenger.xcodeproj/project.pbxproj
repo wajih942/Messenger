@@ -11,6 +11,7 @@
 		463F992428B7078D0089A7ED /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F992328B7078D0089A7ED /* FileStorage.swift */; };
 		4668060428C180EE006389DB /* StartChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668060328C180EE006389DB /* StartChat.swift */; };
 		4668060628C18992006389DB /* FirebaseRecentListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668060528C18992006389DB /* FirebaseRecentListener.swift */; };
+		4668060828C1CB78006389DB /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668060728C1CB78006389DB /* ChatsTableViewController.swift */; };
 		46799F9D28C0531A007AEB70 /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46799F9C28C0531A007AEB70 /* RecentChat.swift */; };
 		46799F9F28C06304007AEB70 /* RecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46799F9E28C06304007AEB70 /* RecentTableViewCell.swift */; };
 		467AE59128BC05C30097E385 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AE59028BC05C30097E385 /* GlobalFunctions.swift */; };
@@ -40,6 +41,7 @@
 		463F992328B7078D0089A7ED /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		4668060328C180EE006389DB /* StartChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChat.swift; sourceTree = "<group>"; };
 		4668060528C18992006389DB /* FirebaseRecentListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRecentListener.swift; sourceTree = "<group>"; };
+		4668060728C1CB78006389DB /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
 		46799F9C28C0531A007AEB70 /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
 		46799F9E28C06304007AEB70 /* RecentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTableViewCell.swift; sourceTree = "<group>"; };
 		467AE59028BC05C30097E385 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				467AE59A28BC650A0097E385 /* UsersTableViewController.swift */,
+				4668060728C1CB78006389DB /* ChatsTableViewController.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				467AE59728BC26C30097E385 /* StatusTableViewController.swift in Sources */,
 				467AE59528BC1EBE0097E385 /* Status.swift in Sources */,
 				46E5685D28AC3F4D000C41E2 /* AppDelegate.swift in Sources */,
+				4668060828C1CB78006389DB /* ChatsTableViewController.swift in Sources */,
 				4668060428C180EE006389DB /* StartChat.swift in Sources */,
 				468DEBAC28B44E0C00EB3739 /* FirebaseUserListener.swift in Sources */,
 				46E5685F28AC3F4D000C41E2 /* SceneDelegate.swift in Sources */,

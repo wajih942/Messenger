@@ -39,6 +39,11 @@ class EditProfileTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        //show status view
+        if indexPath.section == 1 && indexPath.row == 0{
+            performSegue(withIdentifier: "editProfileToStatusSeg", sender: self)
+        }
+        
     }
     // MARK: - UpdateUI
     private func showUserInfo(){
@@ -47,6 +52,9 @@ class EditProfileTableViewController: UITableViewController {
             statusLabel.text = user.status
             if user.avatarLink != ""{
                 //set avatar
+                FileStorage.downloadImage(imageUrl: user.avatarLink) { avatarImage in
+                    self.avatarImageView.image = avatarImage?.circleMasked
+                }
             }
         }
     }
@@ -75,7 +83,8 @@ class EditProfileTableViewController: UITableViewController {
                 saveUserLocally(user)
                 FirebaseUserListener.shared.saveUserToFirestore(user)
             }
-            //TODO: save the image locally 
+            //TODO: save the image locally
+            FileStorage.saveFileLocally(fileData: image.jpegData(compressionQuality: 1.0)! as NSData, fileName: User.currentId)
         }
     }
     
@@ -112,7 +121,7 @@ extension EditProfileTableViewController : GalleryControllerDelegate{
                 if avatar != nil {
                     // TODO: upload image
                     self.uploadAvatarImage(avatar!)
-                    self.avatarImageView.image = avatar
+                    self.avatarImageView.image = avatar?.circleMasked
                 }else{
                     ProgressHUD.showError("couldn't select image")
                 }

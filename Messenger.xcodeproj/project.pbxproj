@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		460412A528B2D3FC00ABD2B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */; };
 		463F992428B7078D0089A7ED /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F992328B7078D0089A7ED /* FileStorage.swift */; };
+		4668060428C180EE006389DB /* StartChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668060328C180EE006389DB /* StartChat.swift */; };
+		4668060628C18992006389DB /* FirebaseRecentListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668060528C18992006389DB /* FirebaseRecentListener.swift */; };
+		46799F9D28C0531A007AEB70 /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46799F9C28C0531A007AEB70 /* RecentChat.swift */; };
+		46799F9F28C06304007AEB70 /* RecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46799F9E28C06304007AEB70 /* RecentTableViewCell.swift */; };
+		467AE59128BC05C30097E385 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AE59028BC05C30097E385 /* GlobalFunctions.swift */; };
+		467AE59328BC16DB0097E385 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AE59228BC16DB0097E385 /* Extensions.swift */; };
+		467AE59528BC1EBE0097E385 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AE59428BC1EBE0097E385 /* Status.swift */; };
+		467AE59728BC26C30097E385 /* StatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AE59628BC26C30097E385 /* StatusTableViewController.swift */; };
+		467AE59928BC64DA0097E385 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AE59828BC64DA0097E385 /* UserTableViewCell.swift */; };
+		467AE59B28BC650A0097E385 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AE59A28BC650A0097E385 /* UsersTableViewController.swift */; };
+		467CAC1A28BDA2A60000B1D4 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467CAC1928BDA2A60000B1D4 /* ProfileTableViewController.swift */; };
 		467F163328B532F40044BEFA /* SettingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F163228B532F40044BEFA /* SettingsTableTableViewController.swift */; };
 		467F163528B586BC0044BEFA /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467F163428B586BC0044BEFA /* EditProfileTableViewController.swift */; };
 		468DEBA428B440EC00EB3739 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DEBA328B440EC00EB3739 /* User.swift */; };
@@ -27,6 +38,17 @@
 /* Begin PBXFileReference section */
 		460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		463F992328B7078D0089A7ED /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		4668060328C180EE006389DB /* StartChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChat.swift; sourceTree = "<group>"; };
+		4668060528C18992006389DB /* FirebaseRecentListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRecentListener.swift; sourceTree = "<group>"; };
+		46799F9C28C0531A007AEB70 /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
+		46799F9E28C06304007AEB70 /* RecentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTableViewCell.swift; sourceTree = "<group>"; };
+		467AE59028BC05C30097E385 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		467AE59228BC16DB0097E385 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		467AE59428BC1EBE0097E385 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		467AE59628BC26C30097E385 /* StatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewController.swift; sourceTree = "<group>"; };
+		467AE59828BC64DA0097E385 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		467AE59A28BC650A0097E385 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		467CAC1928BDA2A60000B1D4 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		467F163228B532F40044BEFA /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
 		467F163428B586BC0044BEFA /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		468DEBA328B440EC00EB3739 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -58,10 +80,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		467CAC1428BD9C910000B1D4 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				467F163228B532F40044BEFA /* SettingsTableTableViewController.swift */,
+				467F163428B586BC0044BEFA /* EditProfileTableViewController.swift */,
+				467AE59628BC26C30097E385 /* StatusTableViewController.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		467CAC1528BD9D960000B1D4 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				467AE59828BC64DA0097E385 /* UserTableViewCell.swift */,
+				46799F9E28C06304007AEB70 /* RecentTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		467CAC1628BDA1030000B1D4 /* LoginViews */ = {
+			isa = PBXGroup;
+			children = (
+				46E5686028AC3F4D000C41E2 /* LoginViewController.swift */,
+			);
+			path = LoginViews;
+			sourceTree = "<group>";
+		};
+		467CAC1828BDA1950000B1D4 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				467AE59A28BC650A0097E385 /* UsersTableViewController.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		467CAC1B28BDA3000000B1D4 /* SecondaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				467CAC1928BDA2A60000B1D4 /* ProfileTableViewController.swift */,
+			);
+			path = SecondaryViews;
+			sourceTree = "<group>";
+		};
 		468DEBA528B440F400EB3739 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				468DEBA328B440EC00EB3739 /* User.swift */,
+				46799F9C28C0531A007AEB70 /* RecentChat.swift */,
+				467AE59428BC1EBE0097E385 /* Status.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -71,6 +138,7 @@
 			children = (
 				468DEBA828B44BA000EB3739 /* FCollectionReference.swift */,
 				468DEBAB28B44E0C00EB3739 /* FirebaseUserListener.swift */,
+				4668060528C18992006389DB /* FirebaseRecentListener.swift */,
 				463F992328B7078D0089A7ED /* FileStorage.swift */,
 			);
 			path = FirebaseHelpers;
@@ -80,6 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				468DEBA628B447C300EB3739 /* Constants.swift */,
+				467AE59028BC05C30097E385 /* GlobalFunctions.swift */,
+				4668060328C180EE006389DB /* StartChat.swift */,
+				467AE59228BC16DB0097E385 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -107,9 +178,11 @@
 			children = (
 				46E5685C28AC3F4D000C41E2 /* AppDelegate.swift */,
 				46E5685E28AC3F4D000C41E2 /* SceneDelegate.swift */,
-				46E5686028AC3F4D000C41E2 /* LoginViewController.swift */,
-				467F163228B532F40044BEFA /* SettingsTableTableViewController.swift */,
-				467F163428B586BC0044BEFA /* EditProfileTableViewController.swift */,
+				467CAC1828BDA1950000B1D4 /* MainViews */,
+				467CAC1B28BDA3000000B1D4 /* SecondaryViews */,
+				467CAC1628BDA1030000B1D4 /* LoginViews */,
+				467CAC1428BD9C910000B1D4 /* SettingsView */,
+				467CAC1528BD9D960000B1D4 /* CustomCells */,
 				468DEBAA28B44CBF00EB3739 /* FirebaseHelpers */,
 				468DEBA528B440F400EB3739 /* Model */,
 				468DEBAD28B486FE00EB3739 /* Helpers */,
@@ -255,16 +328,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46799F9D28C0531A007AEB70 /* RecentChat.swift in Sources */,
+				467AE59128BC05C30097E385 /* GlobalFunctions.swift in Sources */,
 				468DEBA928B44BA000EB3739 /* FCollectionReference.swift in Sources */,
+				4668060628C18992006389DB /* FirebaseRecentListener.swift in Sources */,
+				467AE59B28BC650A0097E385 /* UsersTableViewController.swift in Sources */,
 				463F992428B7078D0089A7ED /* FileStorage.swift in Sources */,
 				467F163328B532F40044BEFA /* SettingsTableTableViewController.swift in Sources */,
+				467AE59928BC64DA0097E385 /* UserTableViewCell.swift in Sources */,
 				468DEBA728B447C300EB3739 /* Constants.swift in Sources */,
+				467CAC1A28BDA2A60000B1D4 /* ProfileTableViewController.swift in Sources */,
 				468DEBA428B440EC00EB3739 /* User.swift in Sources */,
 				46E5686128AC3F4D000C41E2 /* LoginViewController.swift in Sources */,
+				467AE59328BC16DB0097E385 /* Extensions.swift in Sources */,
 				467F163528B586BC0044BEFA /* EditProfileTableViewController.swift in Sources */,
+				467AE59728BC26C30097E385 /* StatusTableViewController.swift in Sources */,
+				467AE59528BC1EBE0097E385 /* Status.swift in Sources */,
 				46E5685D28AC3F4D000C41E2 /* AppDelegate.swift in Sources */,
+				4668060428C180EE006389DB /* StartChat.swift in Sources */,
 				468DEBAC28B44E0C00EB3739 /* FirebaseUserListener.swift in Sources */,
 				46E5685F28AC3F4D000C41E2 /* SceneDelegate.swift in Sources */,
+				46799F9F28C06304007AEB70 /* RecentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

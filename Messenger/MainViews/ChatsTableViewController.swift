@@ -84,7 +84,8 @@ class ChatsTableViewController: UITableViewController {
     
     //MARK: - Navigations
     func goToChat(recent:RecentChat){
-        //we need to make sure we have tow recents one for us and one for the other user 
+        //we need to make sure we have tow recents one for us and one for the other user
+        restartChat(chatRoomId: recent.chatRoomId, membersIds: recent.memberIds)
         let privateChatView = ChatViewController(chatId: recent.chatRoomId, recipientId: recent.receiverId, recipientName: recent.receiverName)
         navigationController?.pushViewController(privateChatView, animated: true)
     }

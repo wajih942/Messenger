@@ -40,6 +40,8 @@ class ProfileTableViewController: UITableViewController {
             
             let chatId = startChat(user1: User.currentUser!, user2: user!)
             print("chatroom id is ", chatId)
+            let privateChatView = ChatViewController(chatId: chatId, recipientId: user!.id, recipientName: user!.username)
+            navigationController?.pushViewController(privateChatView, animated: true)
         }
     }
     //MARK: - setupUI

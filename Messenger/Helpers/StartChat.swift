@@ -15,6 +15,13 @@ func startChat(user1:User,user2:User)->String{
     createRecentItems(chatRoomId: chatRoomId, users: [user1,user2])
     return chatRoomId
 }
+func restartChat(chatRoomId:String, membersIds:[String]){
+    FirebaseUserListener.shared.downloadUsersFromFirebase(withIds: membersIds) { users in
+        if users.count > 0 {
+            createRecentItems(chatRoomId: chatRoomId, users: users)
+        }
+    }
+}
 func createRecentItems(chatRoomId: String, users:[User]){
     var memberIdsToCreateRecent = [users.first!.id,users.last!.id]
     print("members to create recent is ",memberIdsToCreateRecent)

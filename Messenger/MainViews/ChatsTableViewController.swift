@@ -48,6 +48,9 @@ class ChatsTableViewController: UITableViewController {
     //MARK: - TableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let recent = searchController.isActive ? filtredRecents[indexPath.row]:allRecents[indexPath.row]
+        FirebaseRecentListener.shared.clearUnreadCounter(recent: recent)
+        goToChat(recent:recent)
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -77,6 +80,13 @@ class ChatsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    //MARK: - Navigations
+    func goToChat(recent:RecentChat){
+        //we need to make sure we have tow recents one for us and one for the other user 
+        let privateChatView = ChatViewController(chatId: recent.chatRoomId, recipientId: recent.receiverId, recipientName: recent.receiverName)
+        navigationController?.pushViewController(privateChatView, animated: true)
     }
     
     //MARK: - setupSearchController

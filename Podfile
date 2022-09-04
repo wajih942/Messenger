@@ -17,6 +17,7 @@ pod 'FirebaseFirestoreSwift'
 pod 'Gallery'
 pod 'RealmSwift'
 
+pod 'MessageKit'
 pod 'ProgressHUD'
 pod 'SKPhotoBrowser'
 

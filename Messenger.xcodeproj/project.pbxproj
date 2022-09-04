@@ -34,6 +34,11 @@
 		46E5686628AC3F4E000C41E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E5686528AC3F4E000C41E2 /* Assets.xcassets */; };
 		46E5686928AC3F4E000C41E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E5686728AC3F4E000C41E2 /* LaunchScreen.storyboard */; };
 		46F3EDEC28C43CFA0028FB1D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3EDEB28C43CFA0028FB1D /* ChatViewController.swift */; };
+		46F3EDEE28C46CB50028FB1D /* MessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3EDED28C46CB50028FB1D /* MessageDataSource.swift */; };
+		46F3EDF128C46D080028FB1D /* MessageCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3EDF028C46D080028FB1D /* MessageCellDelegate.swift */; };
+		46F3EDF328C46D3A0028FB1D /* MessageDisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3EDF228C46D3A0028FB1D /* MessageDisplayDelegate.swift */; };
+		46F3EDF528C46D590028FB1D /* MessageLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3EDF428C46D590028FB1D /* MessageLayoutDelegate.swift */; };
+		46F3EDF728C46D920028FB1D /* InputBarAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3EDF628C46D920028FB1D /* InputBarAccessoryViewDelegate.swift */; };
 		CDD922B616C1940C0750D0D9 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33A2E3A247902EAAFE6F115 /* Pods_Messenger.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +72,11 @@
 		46E5686828AC3F4E000C41E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46E5686A28AC3F4E000C41E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46F3EDEB28C43CFA0028FB1D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		46F3EDED28C46CB50028FB1D /* MessageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataSource.swift; sourceTree = "<group>"; };
+		46F3EDF028C46D080028FB1D /* MessageCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellDelegate.swift; sourceTree = "<group>"; };
+		46F3EDF228C46D3A0028FB1D /* MessageDisplayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayDelegate.swift; sourceTree = "<group>"; };
+		46F3EDF428C46D590028FB1D /* MessageLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLayoutDelegate.swift; sourceTree = "<group>"; };
+		46F3EDF628C46D920028FB1D /* InputBarAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBarAccessoryViewDelegate.swift; sourceTree = "<group>"; };
 		8EC46D5AE4866C438834B6EB /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
 		982DD496382BBC2E2438A9DC /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		F33A2E3A247902EAAFE6F115 /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +135,7 @@
 			children = (
 				467CAC1928BDA2A60000B1D4 /* ProfileTableViewController.swift */,
 				46F3EDEB28C43CFA0028FB1D /* ChatViewController.swift */,
+				46F3EDEF28C46CBC0028FB1D /* ChatViewExtentions */,
 			);
 			path = SecondaryViews;
 			sourceTree = "<group>";
@@ -199,6 +210,18 @@
 				460412A428B2D3FC00ABD2B5 /* GoogleService-Info.plist */,
 			);
 			path = Messenger;
+			sourceTree = "<group>";
+		};
+		46F3EDEF28C46CBC0028FB1D /* ChatViewExtentions */ = {
+			isa = PBXGroup;
+			children = (
+				46F3EDED28C46CB50028FB1D /* MessageDataSource.swift */,
+				46F3EDF028C46D080028FB1D /* MessageCellDelegate.swift */,
+				46F3EDF228C46D3A0028FB1D /* MessageDisplayDelegate.swift */,
+				46F3EDF428C46D590028FB1D /* MessageLayoutDelegate.swift */,
+				46F3EDF628C46D920028FB1D /* InputBarAccessoryViewDelegate.swift */,
+			);
+			path = ChatViewExtentions;
 			sourceTree = "<group>";
 		};
 		8C8590B7468BDCA23C328179 /* Frameworks */ = {
@@ -339,6 +362,8 @@
 				468DEBA928B44BA000EB3739 /* FCollectionReference.swift in Sources */,
 				4668060628C18992006389DB /* FirebaseRecentListener.swift in Sources */,
 				467AE59B28BC650A0097E385 /* UsersTableViewController.swift in Sources */,
+				46F3EDF728C46D920028FB1D /* InputBarAccessoryViewDelegate.swift in Sources */,
+				46F3EDF128C46D080028FB1D /* MessageCellDelegate.swift in Sources */,
 				463F992428B7078D0089A7ED /* FileStorage.swift in Sources */,
 				467F163328B532F40044BEFA /* SettingsTableTableViewController.swift in Sources */,
 				467AE59928BC64DA0097E385 /* UserTableViewCell.swift in Sources */,
@@ -352,7 +377,10 @@
 				467AE59528BC1EBE0097E385 /* Status.swift in Sources */,
 				46F3EDEC28C43CFA0028FB1D /* ChatViewController.swift in Sources */,
 				46E5685D28AC3F4D000C41E2 /* AppDelegate.swift in Sources */,
+				46F3EDF328C46D3A0028FB1D /* MessageDisplayDelegate.swift in Sources */,
+				46F3EDEE28C46CB50028FB1D /* MessageDataSource.swift in Sources */,
 				4668060828C1CB78006389DB /* ChatsTableViewController.swift in Sources */,
+				46F3EDF528C46D590028FB1D /* MessageLayoutDelegate.swift in Sources */,
 				4668060428C180EE006389DB /* StartChat.swift in Sources */,
 				468DEBAC28B44E0C00EB3739 /* FirebaseUserListener.swift in Sources */,
 				46E5685F28AC3F4D000C41E2 /* SceneDelegate.swift in Sources */,

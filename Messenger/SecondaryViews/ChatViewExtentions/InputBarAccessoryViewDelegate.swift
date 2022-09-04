@@ -6,4 +6,8 @@
 //
 
 import Foundation
+import InputBarAccessoryView
 
+extension ChatViewController: InputBarAccessoryViewDelegate{
+    
+}

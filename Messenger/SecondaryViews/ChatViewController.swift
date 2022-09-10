@@ -19,7 +19,7 @@ class ChatViewController: MessagesViewController {
     private var recipentName = ""
     let currentUser = MKSender(senderId: User.currentId, displayName: User.currentUser!.username)
     let refreshController = UIRefreshControl()
-    
+    var mkMessages : [MKMessage] = []
     let micButton = InputBarButtonItem()
     //MARK: - Inits
     init(chatId : String, recipientId: String, recipientName: String) {
@@ -37,7 +37,8 @@ class ChatViewController: MessagesViewController {
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureMessageCollectionView()
+        configureMessageInputBar()
     }
     
     //MARK: - configurations
@@ -73,6 +74,11 @@ class ChatViewController: MessagesViewController {
         messageInputBar.inputTextView.isImagePasteEnabled = false
         messageInputBar.backgroundView.backgroundColor = .systemBackground
         messageInputBar.inputTextView.backgroundColor = .systemBackground
+        
+    }
+    
+    //MARK: - Actions
+    func messageSend(text:String?,photo:UIImage?,video:String?,audio:String?,location:String?,audioDuration: Float = 0.0){
         
     }
     

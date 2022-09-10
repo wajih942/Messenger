@@ -14,11 +14,11 @@ extension ChatViewController : MessagesDataSource{
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
-        <#code#>
+        return mkMessages[indexPath.row]
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        <#code#>
+        return mkMessages.count
     }
     
     

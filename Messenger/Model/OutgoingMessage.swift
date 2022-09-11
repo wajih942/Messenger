@@ -33,8 +33,18 @@ class OutgoingMessage {
         
         //TODO: Update recent
     }
-    
-    func sendTextMessage(message:LocalMessage,text:String,memberIds:[String]){
-        message.message = text
+    class func sendMessage(message:LocalMessage,memberIds:[String]){
+        RealmManager.shared.saveToRealm(message)
+        
+        for memberId in memberIds {
+            print("save message for \(memberIds)")
+        }
     }
+    
+    
+}
+func sendTextMessage(message:LocalMessage,text:String,memberIds:[String]){
+    message.message = text
+    message.type = kTEXT
+    OutgoingMessage.sendMessage(message: message, memberIds: memberIds)
 }

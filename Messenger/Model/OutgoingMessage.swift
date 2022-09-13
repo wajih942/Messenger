@@ -37,7 +37,7 @@ class OutgoingMessage {
         RealmManager.shared.saveToRealm(message)
         
         for memberId in memberIds {
-            print("save message for \(memberIds)")
+            FirebaseMessageListener.shared.addMessage(message, memberId: memberId)
         }
     }
     

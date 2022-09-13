@@ -12,6 +12,8 @@
 		4668060428C180EE006389DB /* StartChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668060328C180EE006389DB /* StartChat.swift */; };
 		4668060628C18992006389DB /* FirebaseRecentListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668060528C18992006389DB /* FirebaseRecentListener.swift */; };
 		4668060828C1CB78006389DB /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668060728C1CB78006389DB /* ChatsTableViewController.swift */; };
+		466CFE0628D01CBB009134FE /* FirebaseMessageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CFE0528D01CBB009134FE /* FirebaseMessageListener.swift */; };
+		466CFE0828D02CD5009134FE /* IncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CFE0728D02CD5009134FE /* IncomingMessage.swift */; };
 		466E813A28C9CFFD0096DD14 /* MKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E813928C9CFFD0096DD14 /* MKMessage.swift */; };
 		466E813C28C9D3060096DD14 /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E813B28C9D3060096DD14 /* LocalMessage.swift */; };
 		46799F9D28C0531A007AEB70 /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46799F9C28C0531A007AEB70 /* RecentChat.swift */; };
@@ -53,6 +55,8 @@
 		4668060328C180EE006389DB /* StartChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChat.swift; sourceTree = "<group>"; };
 		4668060528C18992006389DB /* FirebaseRecentListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRecentListener.swift; sourceTree = "<group>"; };
 		4668060728C1CB78006389DB /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
+		466CFE0528D01CBB009134FE /* FirebaseMessageListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMessageListener.swift; sourceTree = "<group>"; };
+		466CFE0728D02CD5009134FE /* IncomingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessage.swift; sourceTree = "<group>"; };
 		466E813928C9CFFD0096DD14 /* MKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMessage.swift; sourceTree = "<group>"; };
 		466E813B28C9D3060096DD14 /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
 		46799F9C28C0531A007AEB70 /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				467AE59428BC1EBE0097E385 /* Status.swift */,
 				466E813928C9CFFD0096DD14 /* MKMessage.swift */,
 				467EE08C28CC5ED7009410CA /* OutgoingMessage.swift */,
+				466CFE0728D02CD5009134FE /* IncomingMessage.swift */,
 				466E813D28C9D30F0096DD14 /* RealmMessages */,
 			);
 			path = Model;
@@ -178,6 +183,7 @@
 				468DEBA828B44BA000EB3739 /* FCollectionReference.swift */,
 				468DEBAB28B44E0C00EB3739 /* FirebaseUserListener.swift */,
 				4668060528C18992006389DB /* FirebaseRecentListener.swift */,
+				466CFE0528D01CBB009134FE /* FirebaseMessageListener.swift */,
 				463F992328B7078D0089A7ED /* FileStorage.swift */,
 			);
 			path = FirebaseHelpers;
@@ -401,11 +407,13 @@
 				467F163528B586BC0044BEFA /* EditProfileTableViewController.swift in Sources */,
 				467AE59728BC26C30097E385 /* StatusTableViewController.swift in Sources */,
 				467AE59528BC1EBE0097E385 /* Status.swift in Sources */,
+				466CFE0828D02CD5009134FE /* IncomingMessage.swift in Sources */,
 				46F3EDEC28C43CFA0028FB1D /* ChatViewController.swift in Sources */,
 				46E5685D28AC3F4D000C41E2 /* AppDelegate.swift in Sources */,
 				46F3EDF328C46D3A0028FB1D /* MessageDisplayDelegate.swift in Sources */,
 				46F3EDEE28C46CB50028FB1D /* MessageDataSource.swift in Sources */,
 				4668060828C1CB78006389DB /* ChatsTableViewController.swift in Sources */,
+				466CFE0628D01CBB009134FE /* FirebaseMessageListener.swift in Sources */,
 				467EE08B28CC3095009410CA /* RealmManager.swift in Sources */,
 				46F3EDF528C46D590028FB1D /* MessageLayoutDelegate.swift in Sources */,
 				4668060428C180EE006389DB /* StartChat.swift in Sources */,

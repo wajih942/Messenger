@@ -14,7 +14,7 @@ extension ChatViewController : MessagesDataSource{
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
-        return mkMessages[indexPath.row]
+        return mkMessages[indexPath.section]
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {

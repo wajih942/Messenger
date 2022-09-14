@@ -12,7 +12,10 @@ import Gallery
 import RealmSwift
 class ChatViewController: MessagesViewController {
     
-    
+    //MARK: - Views
+    let leftBarButtonView : UIView = {
+        return UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+    }()
     //MARK: - Vars
     private var chatId = ""
     private var recipientId = ""
@@ -43,6 +46,7 @@ class ChatViewController: MessagesViewController {
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = recipentName
         configureMessageCollectionView()
         configureMessageInputBar()
         loadChats()

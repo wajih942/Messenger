@@ -16,6 +16,19 @@ class ChatViewController: MessagesViewController {
     let leftBarButtonView : UIView = {
         return UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
     }()
+    let titleLabel : UILabel = {
+        let title = UILabel(frame: CGRect(x: 5, y: 0, width: 180, height: 25))
+        title.textAlignment = .left
+        title.font = UIFont.systemFont(ofSize: 16,weight: .medium)
+        title.adjustsFontSizeToFitWidth = true
+        return title
+    }()
+    let subTitleLabel :UILabel = {
+        let subTitle = UILabel(frame: CGRect(x: 5, y: 22, width: 180, height: 20))
+        subTitle.font = UIFont.systemFont(ofSize: 13,weight: .medium)
+        subTitle.adjustsFontSizeToFitWidth = true
+        return subTitle
+    }()
     //MARK: - Vars
     private var chatId = ""
     private var recipientId = ""
@@ -46,9 +59,10 @@ class ChatViewController: MessagesViewController {
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = recipentName
         configureMessageCollectionView()
         configureMessageInputBar()
+        configureLeftBarButton()
+        configureCustomTitle()
         loadChats()
     }
     
@@ -86,6 +100,18 @@ class ChatViewController: MessagesViewController {
         messageInputBar.backgroundView.backgroundColor = .systemBackground
         messageInputBar.inputTextView.backgroundColor = .systemBackground
         
+    }
+    
+    private func configureLeftBarButton(){
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(self.backButtonPressed))
+    }
+    private func configureCustomTitle(){
+        leftBarButtonView.addSubview(titleLabel)
+        leftBarButtonView.addSubview(subTitleLabel)
+        
+        let leftBarButtonItem = UIBarButtonItem(customView: leftBarButtonView)
+        self.navigationItem.leftBarButtonItems?.append(leftBarButtonItem)
+        titleLabel.text = recipentName
     }
     //MARK: - Load chats
     
@@ -128,7 +154,12 @@ class ChatViewController: MessagesViewController {
         OutgoingMessage.send(chaId: chatId, text: text, photo: photo, video: video, audio: audio, location: location, memberIds: [User.currentId,recipientId])
     }
     
-
+    @objc func backButtonPressed(){
+        
+        //TODO: REMOVE LISTENERS
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
-
+    //MARK: - Update Typing indicator
+    
 }

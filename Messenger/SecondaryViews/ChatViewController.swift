@@ -63,6 +63,7 @@ class ChatViewController: MessagesViewController {
         configureMessageInputBar()
         configureLeftBarButton()
         configureCustomTitle()
+        updateTypingIndicator(true)
         loadChats()
     }
     
@@ -96,10 +97,22 @@ class ChatViewController: MessagesViewController {
         //add gesture recognizer
         messageInputBar.setStackViewItems([attachButton], forStack: .left, animated: false)
         messageInputBar.setLeftStackViewWidthConstant(to: 36, animated: false)
+        
+        updateMicButtonStatus(show: true)
         messageInputBar.inputTextView.isImagePasteEnabled = false
         messageInputBar.backgroundView.backgroundColor = .systemBackground
         messageInputBar.inputTextView.backgroundColor = .systemBackground
         
+    }
+    
+    func updateMicButtonStatus(show:Bool){
+        if show {
+            messageInputBar.setStackViewItems([micButton], forStack: .right, animated: false)
+            messageInputBar.setRightStackViewWidthConstant(to: 30, animated: false)
+        }else{
+            messageInputBar.setStackViewItems([messageInputBar.sendButton], forStack: .right, animated: false)
+            messageInputBar.setRightStackViewWidthConstant(to: 55, animated: false)
+        }
     }
     
     private func configureLeftBarButton(){
@@ -139,6 +152,8 @@ class ChatViewController: MessagesViewController {
         })
     }
     
+    
+    //MARK: - Insert Messages
     private func insertMessages(){
         for message in allLocalMessages {
             insertMessage(message)
@@ -161,5 +176,7 @@ class ChatViewController: MessagesViewController {
     }
     
     //MARK: - Update Typing indicator
-    
+    func updateTypingIndicator(_ show : Bool){
+        subTitleLabel.text = show ? "Typing.." : ""
+    }
 }

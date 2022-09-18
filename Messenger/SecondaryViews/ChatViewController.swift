@@ -38,6 +38,10 @@ class ChatViewController: MessagesViewController {
     var mkMessages : [MKMessage] = []
     var allLocalMessages : Results<LocalMessage>!
     let realm = try! Realm()
+    
+    var displayingMessagesCount = 0
+    var maxMessageNumber = 0
+    var minMessageNumber = 0
 
     let micButton = InputBarButtonItem()
     
@@ -65,6 +69,7 @@ class ChatViewController: MessagesViewController {
         configureCustomTitle()
         updateTypingIndicator(true)
         loadChats()
+        listenForNewChats()
     }
     
     //MARK: - configurations
@@ -131,7 +136,9 @@ class ChatViewController: MessagesViewController {
     private func loadChats(){
         let predicate = NSPredicate(format: "chatRoomId = %@", chatId)
         allLocalMessages = realm.objects(LocalMessage.self).filter(predicate).sorted(byKeyPath: kDate,ascending: true)
-        
+        if allLocalMessages.isEmpty {
+            checkForOldChats()
+        }
         notificationToken = allLocalMessages.observe({
             (changes:RealmCollectionChange) in
             switch changes {
@@ -151,18 +158,31 @@ class ChatViewController: MessagesViewController {
             }
         })
     }
+    private func listenForNewChats(){
+        FirebaseMessageListener.shared.listenForNewChats(User.currentId, collectionId: chatId, lastMessageDate: lastMessageDate())
+    }
+    private func checkForOldChats(){
+        FirebaseMessageListener.shared.checkForOldChats(User.currentId, collectionId: chatId)
+    }
     
     
     //MARK: - Insert Messages
     private func insertMessages(){
-        for message in allLocalMessages {
-            insertMessage(message)
+        maxMessageNumber = allLocalMessages.count - displayingMessagesCount
+        minMessageNumber = maxMessageNumber - KNUMBEROFMESSAGES
+        
+        if minMessageNumber < 0 {
+            minMessageNumber = 0
+        }
+        for i in minMessageNumber ..< maxMessageNumber {
+            insertMessage(allLocalMessages[i])
         }
     }
     private func insertMessage(_ localMessage: LocalMessage){
         print("inserted messages")
         let incoming = IncomingMessage(_collectionView: self)
         self.mkMessages.append(incoming.createMessage(localMessage: localMessage)!)
+        displayingMessagesCount += 1 
     }
     //MARK: - Actions
     func messageSend(text:String?,photo:UIImage?,video:String?,audio:String?,location:String?,audioDuration: Float = 0.0){
@@ -172,11 +192,17 @@ class ChatViewController: MessagesViewController {
     @objc func backButtonPressed(){
         
         //TODO: REMOVE LISTENERS
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //MARK: - Update Typing indicator
     func updateTypingIndicator(_ show : Bool){
         subTitleLabel.text = show ? "Typing.." : ""
+    }
+    
+    //MARK: - Helpers
+    private func lastMessageDate() -> Date{
+        let lastMessageDate = allLocalMessages.last?.date ?? Date()
+        return Calendar.current.date(byAdding: .second,value: 1,to: lastMessageDate) ?? lastMessageDate
     }
 }

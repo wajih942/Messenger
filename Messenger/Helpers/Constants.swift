@@ -9,6 +9,8 @@ import Foundation
 let userDefaults = UserDefaults.standard
 
 public let KFILEREFRENCE = "gs://messenger-67d95.appspot.com"
+
+public let KNUMBEROFMESSAGES = 12
 public let KCURRENTUSER = "currentUser"
 public let KSTATUS = "status"
 public let KFIRSTRUN = "firstRun"
